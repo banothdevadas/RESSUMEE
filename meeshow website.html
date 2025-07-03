@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Maasho Header</title>
+ <style>
+  body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.meesho-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #33f4ee; /* Meesho pink */
+  color: white;
+}
+
+.logo span {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.search-box {
+  flex: 1;
+  display: flex;
+  margin: 0 20px;
+  max-width: 600px;
+}
+
+.search-box input {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  border-radius: 4px 0 0 4px;
+  font-size: 16px;
+}
+
+.search-box button {
+  background-color: white;
+  color: #f43397;
+  border: none;
+  padding: 8px 12px;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 0 4px 4px 0;
+}
+
+.action-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+/* Add below existing CSS */
+
+.result-text {
+  text-align: center;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  background-color: #f8f8f8;
+}
+
+.product-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  transition: transform 0.2s;
+}
+
+.product-card:hover {
+  transform: scale(1.03);
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.product-card h3 {
+  margin: 10px 0 5px;
+  font-size: 16px;
+}
+
+.product-card p {
+  color: #f43397;
+  font-weight: bold;
+}
+
+ </style>
+</head>
+<body>
+
+  <header class="meesho-header">
+    <!-- Logo -->
+    <div class="logo">
+      <!-- You can also use an <img src="logo.png"> -->
+      <span>Maasho</span>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Try Saree, Kurti, or Search by Product Code" />
+      <button onclick="search()">🔍</button>
+    </div>
+
+    <!-- Icons -->
+    <div class="action-icons">
+      <button class="icon-btn">🛒</button>
+      <button class="icon-btn">👤</button>
+    </div>
+  </header>
+
+  <p id="result" class="result-text"></p>
+
+  <!-- Product Grid -->
+  <section class="product-grid">
+    <div class="product-card">
+      <img src="https://monamaar.com/cdn/shop/files/0M1A8913.jpg?v=1718507154&width=1080" alt="Kurti">
+      <h3>Stylish Kurti</h3>
+      <p>₹3999</p>
+    </div>
+    <div class="product-card">
+      <img src="https://www.meenabazaar.shop/cdn/shop/products/MBS1019RED-2.jpg?v=1650830886" alt="Saree">
+      <h3>Elegant Saree</h3>
+      <p>₹6999</p>
+    </div>
+    <div class="product-card">
+      <img src="https://www.soosi.co.in/cdn/shop/products/WhatsApp_Image_2019-12-22_at_18.16.07_580x.jpg?v=1577469125" alt="Handbag">
+      <h3>Trendy Handbag</h3>
+      <p>₹299</p>
+    </div>
+    <div class="product-card">
+      <img src="https://s.alicdn.com/@sc04/kf/Hea0c06a15ae64af38efeb0e16f2f63afY.jpg" alt="Shoes">
+      <h3>Comfortable Shoes</h3>
+      <p>₹499</p>
+    </div>
+    <div class="product-card">
+      <img src="https://m.media-amazon.com/images/I/71ZgOymQBkL._UY1100_.jpg" alt="Hoodies">
+      <h3> Hoodies</h3>
+      <p>₹599</p>
+    </div>
+  </section>
+  <script src="mes.js"></script>
+</body>
+</html>
