@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="myButton">click me</button>
+<script>
+document.getElementById("myButton").addEventListener("click", function(){
+alert("Button was clicked!");
+});
+
+</script>
+    <p id="dblclick">doubble click the button</p>
+    <script>
+        document.getElementById("dblclick").addEventListener("click", function(){
+                this.style.color="red";
+                this.style.fontSize="30px";
+            });
+    </script>
+    <p id="heading">color change by moving mouse</p>
+    <script>
+        document.getElementById("heading").addEventListener("mouseover", function () {
+            this.style.color = "blue";
+            this.style.background="yellow";
+            this.style.fontSize="30px";
+        });
+    </script>
+    <p id="headingg">color change by moving mouse</p>
+    <script>
+        document.getElementById("headingg").addEventListener("mouseout",function () {
+            this.style.color = "blue";
+            this.style.background="pink";
+            this.style.fontSize="30px";
+        });
+    </script>
+    <script>
+        document.addEventListener("keydown",function(event){
+            console.log("key pressed:" + event.key);
+        });
+    </script>
+    <input type="text" id="inputField" placeholder="you can type here"><br>
+    <script>
+        document.getElementById("inputField").addEventListener("keyup", function(){
+            console.log("You release a key");
+        });
+    </script>
+    <select id="dropdown">
+        <option>option1</option>
+        <option>option2</option>
+        <option>option3</option>
+    </select><br>
+    <script>
+        document.getElementById("dropdown").addEventListener("change", function(){
+            alert("You selected:" + this.value); 
+        });
+    </script>
+<input type="text" id="focusfield" placeholder="type here"><br>
+    <script>
+        document.getElementById("focusfield").addEventListener("focus", function(){
+            this.style.backgroundColor="orange";
+        });
+    </script>
+<input type="text" id="blurfield" placeholder="type here">
+    <script>
+        document.getElementById("blurfield").addEventListener("blur", function(){
+            this.style.backgroundColor="lightblue";
+        });
+    </script>
+
+</body>
+
+</html>
